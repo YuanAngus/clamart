@@ -7,7 +7,7 @@ import loginRoutes from './routes/login.js'
 import memberRoutes from './routes/member.js'
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors({
   origin: '*', // 开发阶段允许所有源
@@ -25,5 +25,5 @@ app.use('/login', loginRoutes);
 app.use('/member', memberRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

@@ -6,7 +6,8 @@ import { ElMessage } from 'element-plus'
 
 // 基地址与超时时间
 const httpInstance = axios.create({
-  baseURL: 'http://localhost:3000',
+  // baseURL: 'http://localhost:3000',
+  baseURL: 'https://clamart.onrender.com',
   timeout: 10000
 })
 
